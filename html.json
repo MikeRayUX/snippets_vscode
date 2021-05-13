@@ -1,0 +1,21 @@
+// in order for snippets to work in multiple file types react.js html.erb e.t.c the these snippets must also exist in those respective file type user snippets.json files
+{
+	"html div": {
+		"prefix": "htmldiv",
+		"body": [
+			"<div ${1:class}=\"${2:some_tailwind_classes}\">",
+			"  ${3:child_elements}",
+			"</div>"
+		],
+		"description": "html div"
+	},
+	"html h3": {
+		"prefix": "htmlh3",
+		"body": [
+			"<h3 ${1:class}=\"${2:some_tailwind_classes}\">",
+			"  ${3:content}",
+			"</h3>"
+		],
+		"description": "html h3"
+	}
+}
