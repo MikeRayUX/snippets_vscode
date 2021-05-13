@@ -17,5 +17,23 @@
 			"</h3>"
 		],
 		"description": "html h3"
+	},
+	"html h1": {
+		"prefix": "htmlh1",
+		"body": [
+			"<h1 ${1:class}=\"${2:some_tailwind_classes}\">",
+			"  ${3:content}",
+			"</h1>"
+		],
+		"description": "html h1"
+	},
+	"html span": {
+		"prefix": "htmlspan",
+		"body": [
+			"<span ${1:class}=\"${2:some_tailwind_classes}\">",
+			"  ${3:content}",
+			"</span>"
+		],
+		"description": "html span"
 	}
 }

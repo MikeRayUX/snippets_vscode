@@ -1,11 +1,11 @@
+// in order for snippets to work in multiple file types react.js html.erb e.t.c the these snippets must also exist in those respective file type user snippets.json files
 {
 	"rails create form": {
 		"prefix": "erbform",
 		"body": [
 			"<div class=\"bg-white p-2 rounded w-full max-w-2xl mb-4 mx-auto\">",
 			"",
-			"  <h3 class=\"font-bold text-sm mb-2 text-center\">",
-			"    ${1:form_title}",
+			"  <h3 class=\"font-bold text-sm mb-2 text-center\">", "    ${1:form_title}",
 			"  </h3>",
 			"",
 			"  <%= form_for :${2:resource}, url: {controller: '${3:controller/path}', action: :${4:action}} do |f|%>",
@@ -58,6 +58,15 @@
 		],
 		"description": "html div"
 	},
+	"erb each do": {
+		"prefix": "erbeach",
+		"body": [
+			"<% @${1:collection}.each do |${2:variable}| %>",
+			"    ${3:do_something}",
+			"<% end %>"
+		],
+		"description": "erb each do"
+	},
 	"html h3": {
 		"prefix": "htmlh3",
 		"body": [
@@ -67,13 +76,29 @@
 		],
 		"description": "html h3"
 	},
-	"erb each do": {
-		"prefix": "erbeach",
+	"html h1": {
+		"prefix": "htmlh1",
 		"body": [
-			"<% @${1:collection}.each do |${2:variable}| %>",
-			"    ${3:do_something}",
-			"<% end %>"
+			"<h1 ${1:class}=\"${2:some_tailwind_classes}\">",
+			"  ${3:content}",
+			"</h1>"
 		],
-		"description": "erb each do"
+		"description": "html h1"
+	},
+	"html span": {
+		"prefix": "htmlspan",
+		"body": [
+			"<span ${1:class}=\"${2:some_tailwind_classes}\">",
+			"  ${3:content}",
+			"</span>"
+		],
+		"description": "html span"
+	},
+	"erb link_to": {
+		"prefix": "erblinkto",
+		"body": [
+			"<%= link_to '${1:link_text}', ${2:some_path}, class: '${3:text-xs px-2 rounded bg-indigo-800 text-white font-bold}'%>"
+		],
+		"description": "erb link_to"
 	}
 }
