@@ -1,0 +1,79 @@
+{
+	"rails create form": {
+		"prefix": "erbform",
+		"body": [
+			"<div class=\"bg-white p-2 rounded w-full max-w-2xl mb-4 mx-auto\">",
+			"",
+			"  <h3 class=\"font-bold text-sm mb-2 text-center\">",
+			"    ${1:form_title}",
+			"  </h3>",
+			"",
+			"  <%= form_for :${2:resource}, url: {controller: '${3:controller/path}', action: :${4:action}} do |f|%>",
+			"    <div class=\"w-full px-4 mx-auto\">",
+			"        <div class=\"w-full mb-2\">",
+			"          <%= f.text_field :${5:attribute}, placeholder: '${6:placeholder_text}', class: 'pl-2 text-sm h-12 rounded-sm border bg-white text-gray-900 w-full' %>",
+			"        </div>",
+			"    </div>",
+			"",
+			"    <div class=\"flex justify-end items-center\">",
+			"      <%= f.submit '${7:button_text}', class: 'block font-black mt-2 w-full py-4 px-3 bg-green-600 text-xs text-white rounded'%>",
+			"    </div>",
+			"",
+			"  <% end %>",
+			"</div>"
+		],
+		"description": "rails create form"
+	},
+	"rails form text field": {
+		"prefix": "erbtextfield",
+		"body": [
+			"<%= f.text_field :${1:attribute}, placeholder: '${2:placeholder_text}', class: 'pl-2 text-sm h-12 rounded-sm border bg-white text-gray-900 w-full' %>"
+		],
+		"description": "rails form text field"
+	},
+	"rails form hidden_field_tag": {
+		"prefix": "erbhiddentextfield",
+		"body": [
+			"<%= hidden_field_tag :${1:attribute}, ${2:preset_value}%>"
+		],
+		"description": "rails form f.hidden_text_field"
+	},
+	"rails erb if else": {
+		"prefix": "erbif",
+		"body": [
+			"<% if ${1:expression}%>",
+			"  ${2:do_something}",
+			"<% else %>",
+			"  ${3:do_something_else}",
+			"<% end %>"
+		],
+		"description": "rails erb if else"
+	},
+	"html div": {
+		"prefix": "htmldiv",
+		"body": [
+			"<div class=\"${1:some_tailwind_classes}\">",
+			"  ${2:child_elements}",
+			"</div>"
+		],
+		"description": "html div"
+	},
+	"html h3": {
+		"prefix": "htmlh3",
+		"body": [
+			"<h3 class=\"${1:some_tailwind_classes}\">",
+			"  ${2:Some Words Here}",
+			"</h3>"
+		],
+		"description": "html h3"
+	},
+	"erb each do": {
+		"prefix": "erbeach",
+		"body": [
+			"<% @${1:collection}.each do |${2:variable}| %>",
+			"    ${3:do_something}",
+			"<% end %>"
+		],
+		"description": "erb each do"
+	}
+}
