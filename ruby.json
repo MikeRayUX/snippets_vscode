@@ -74,5 +74,12 @@
 			"end"
 		],
 		"description": "rails controller"
+	},
+	"rspec expect block": {
+		"prefix": "exp",
+		"body": [
+			"expect(${1:something}).${2:to} eq ${3:something_else}"
+		],
+		"description": "rspec expect block"
 	}
 }
