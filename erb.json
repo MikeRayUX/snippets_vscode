@@ -121,5 +121,12 @@
 			"<%= f.select :${1:some_attribute}, options_for_select(${2:Model}.all.each.map{|${3:mapVar}| [\"#{${4:displayOption}} \", ${5:Value}]}, ), {}, class: 'pl-2 text-sm h-12 rounded-sm border bg-white text-gray-900 w-full' %>"
 		],
 		"description": "erb select_field"
+	},
+	"erb partial": {
+		"prefix": "erbpartial",
+		"body": [
+			"<%= render partial: '${1:path_to_partial}', locals: { ${2:variables} } %>"
+		],
+		"description": "erb partial"
 	}
 }
