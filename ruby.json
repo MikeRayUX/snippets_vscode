@@ -61,7 +61,7 @@
 			"",
 			"  end",
 			"",
-			"  def delete",
+			"  def destroy",
 			"",
 			"  end",
 			"",
