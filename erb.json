@@ -27,6 +27,13 @@
 		],
 		"description": "erbformpost"
 	},
+	"erb form delete": {
+		"prefix": "erbformdelete",
+		"body": [
+			"<%= check_box_tag '${1:model}_ids[]', ${1:model}.id, false, class: 'item' %>"
+		],
+		"description": "erb form delete"
+	},
 	"rails form text field": {
 		"prefix": "erbtextfield",
 		"body": [
@@ -137,5 +144,12 @@
 			"<%= ${1:interpolated} %>"
 		],
 		"description": "erb interpolate"
+	},
+	"erb checkbox tag": {
+		"prefix": "erbformcheckbox",
+		"body": [
+			"<%= check_box_tag '${1:model}_ids[]', ${1:model}.id, false, class: 'item' %>"
+		],
+		"description": "erb checkbox tag"
 	}
 }
