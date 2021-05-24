@@ -130,5 +130,12 @@
 			"<%= render partial: '${1:path_to_partial}', locals: { ${2:variables} } %>"
 		],
 		"description": "erb partial"
+	},
+	"erb interpolate": {
+		"prefix": "erbint",
+		"body": [
+			"<%= ${1:interpolated} %>"
+		],
+		"description": "erb interpolate"
 	}
 }
