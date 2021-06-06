@@ -151,5 +151,12 @@
 			"<%= check_box_tag '${1:model}_ids[]', ${1:model}.id, false, class: 'item' %>"
 		],
 		"description": "erb checkbox tag"
+	},
+	"erb javscript_pack_tag": {
+		"prefix": "erbpacktag",
+		"body": [
+			"<%= javascript_pack_tag '${1:path/to/file}'%>"
+		],
+		"description": "erb javscript_pack_tag"
 	}
 }
