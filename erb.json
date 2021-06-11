@@ -158,5 +158,12 @@
 			"<%= javascript_pack_tag '${1:path/to/file}'%>"
 		],
 		"description": "erb javscript_pack_tag"
+	},
+	"erb image tag": {
+		"prefix": "erbimagetag",
+		"body": [
+			"<%= image_tag '${1:path/to/file.png}', class: '${2:some-classes-here}'%>"
+		],
+		"description": "erb image tag"
 	}
 }
