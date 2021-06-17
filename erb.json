@@ -1,4 +1,4 @@
-// in order for snippets to work in multiple file types react.js html.erb e.t.c the these snippets must also exist in those respective file type user snippets.json files
+// in order for snippets to work in multiple file types react.js html.erb e.t.c the these snippets must also exist in those respective matching extensions such as js.json, rb.json e.t.c
 {
 	"erbformpost": {
 		"prefix": "erbformpost",
@@ -107,7 +107,7 @@
 	"erb link_to": {
 		"prefix": "erblinkto",
 		"body": [
-			"<%= link_to '${1:link_text}', ${2:some_path}, class: '${3:text-xs px-2 rounded bg-indigo-800 text-white font-bold}'%>"
+			"<%= link_to '${1:link_text}', ${2:root_path}, class: '${3:text-xs px-2 rounded bg-indigo-800 text-white font-bold}'%>"
 		],
 		"description": "erb link_to"
 	},
