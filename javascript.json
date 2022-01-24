@@ -20,10 +20,19 @@
     "body": ["const [${1:state}, ${2:setState}] = useState(${3:defaultState})"],
     "description": "react state"
   },
-  "useEffect": {
+  "react useEffect": {
     "prefix": "rue",
     "body": ["useEffect(() => {", "  ${1:doSomething}", "}, [${2:state}])", ""],
     "description": "React useEffect()"
+  },
+  "react html tag": {
+    "prefix": "rtag",
+    "body": [
+      "<${1:tag_name} style={{}} className={\"${2:some_tailwind_classes}\"}>",
+      "  ${3:content}",
+      "</${1:tag_name}>"
+    ],
+    "description": "react html tag"
   },
   "react-native-component": {
     "prefix": "rncomp",
