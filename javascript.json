@@ -1,3 +1,4 @@
+// in order for snippets to work in multiple file types react.js html.erb e.t.c you must also put these snippets in the snippet file (i.e. ruby.json) snippet json file
 {
   "react-component": {
     "prefix": "rcomp",
