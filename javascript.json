@@ -5,7 +5,7 @@
     "body": [
       "import React, {useEffect, useState, useContext, useRef} from 'react';",
       "",
-      "const ${2:MyComponent} = ({navigation}) => {",
+      "const ${2:MyComponent} = () => {",
       "  return <div>",
       "    <h1>${2:MyComponent}</h1>",
       "  </div>",
