@@ -1,225 +1,228 @@
-// in order for snippets to work in multiple file types react.js html.erb e.t.c the these snippets must also exist in those respective file type user snippets.json files
 {
-	"react-native-component": {
-		"prefix": "rncomp",
-		"body": [
-			"import React, {useEffect, useState, useContext, useRef} from 'react';",
-			"import { View, Text, TouchableOpacity, TextInput, StatusBar, ActivityIndicator, Image, ScrollView } from 'react-native';",
-			"import tw from 'tailwind-rn';",
-			"",
-			"const ${2:MyComponent} = ({navigation}) => {",
-			"  return <View style={tw('w-full h-full')}>",
-			"  <StatusBar barStyle='dark-content' backgroundColor='#ecf0f1' />",
-			"    <Text>${2:MyComponent}</Text>",
-			"  </View>",
-			"}",
-			"",
-			"export default ${2:MyComponent};"
-		],
-		"description": "react-native-component"
-	},
-	"react native view component": {
-		"prefix": "rnview",
-		"body": [
-			"<View style={tw('${1:classes}')}>${2:something}</View>"
-		],
-		"description": "react native view component"
-	},
-	"react native text component": {
-		"prefix": "rntext",
-		"body": [
-			"<Text style={tw('${1:classes}')}>${2:some text}</Text>"
-		],
-		"description": "react native text component"
-	},
-	"react native touchable opacity (button) component": {
-		"prefix": "rnbtn",
-		"body": [
-			"<TouchableOpacity ",
-			"  style={tw('${1:classes}')} ",
-			"  disabled={${2:false}} ",
-			"  onPress={() => {",
-			"    ${3:return null}",
-			"  }}",
-			"  >",
-			"  <Text style={tw('${4:classes}')}>",
-			"    ${5:button text}",
-			"  </Text>",
-			"</TouchableOpacity>"
-		],
-		"description": "react native touchable opacity (button) component"
-	},
-	"react state": {
-		"prefix": "rst",
-		"body": [
-			"const [${1:state}, ${2:setState}] = useState(${3:defaultState})"
-		],
-		"description": "react state"
-	},
-	"useEffect": {
-		"prefix": "rue",
-		"body": [
-			"useEffect(() => {",
-			"  ${1:doSomething}",
-			"}, [${2:state}])",
-			""
-		],
-		"description": "useEffect"
-	},
-	"axios get request without params": {
-		"prefix": "agetwop",
-		"body": [
-			"const ${1:getSomethingWithoutParams} = async () => {",
-			"    try {",
-			"      setIsLoading(true)",
-			"      const { data } = await api.get(",
-			"       ${2:'path'},",
-			"        {",
-			"          headers: {",
-			"            Authorization: await auth_token(),",
-			"          },",
-			"        }",
-			"      );",
-			"",
-			"      await sleep(.3)",
-			"      setIsLoading(false)",
-			"      await sleep(.3)",
-			"",
-			"    } catch(err) {",
-			"    console.log('ERROR', err.message);",
-			"    setFlash(err.message)",
-			"    }",
-			"  }",
-			""
-		],
-		"description": "axios get request without params"
-	},
-	"axios get request with params": {
-		"prefix": "agetwp",
-		"body": [
-			"const ${1:getSomethingWithParams} = async () => {",
-			"    try {",
-			"      setIsLoading(true)",
-			"      const {data} = await api.get(",
-			"       ${2:'path'},",
-			"        {",
-			"         ${3:params}: { ${4:attributes} },",
-			"          headers: { Authorization: await auth_token() },",
-			"        }",
-			"      );",
-			"",
-			"      await sleep(.3)",
-			"      setIsLoading(false)",
-			"      await sleep(.3)",
-			"",
-			"    } catch(err) {",
-			"    console.log('ERROR', err.message);",
-			"    setFlash(err.message)",
-			"    }",
-			"  }",
-			""
-		],
-		"description": "axios get request"
-	},
-	"axios put request": {
-		"prefix": "aput",
-		"body": [
-			"const ${1:putSomething} = async () => {",
-			"    try {",
-			"      setIsLoading(true)",
-			"      const { data } = await api.put(",
-			"       ${2:'path'},",
-			"        {",
-			"          ${3:params}: {",
-			"            ${4:attributes},",
-			"          },",
-			"        },",
-			"        {",
-			"          headers: {",
-			"            Authorization: await auth_token(),",
-			"          },",
-			"        }",
-			"      );",
-			"",
-			"      await sleep(.3)",
-			"      setIsLoading(false)",
-			"      await sleep(.3)",
-			"",
-			"    } catch(err) {",
-			"    console.log('ERROR', err.message);",
-			"    setFlash(err.message)",
-			"    }",
-			"  }",
-			""
-		],
-		"description": "axios put request"
-	},
-	"axios post request": {
-		"prefix": "apost",
-		"body": [
-			"const ${1:postSomething} = async () => {",
-			"    try {",
-			"      setIsLoading(true)",
-			"      const { data } = await api.post(",
-			"        ${2:'path'},",
-			"        {",
-			"         ${3:params}: {",
-			"            ${4:attributes},",
-			"          },",
-			"        },",
-			"        {",
-			"          headers: { Authorization: token },",
-			"        }",
-			"      );",
-			"      ",
-			"",
-			"      await sleep(.3)",
-			"      setIsLoading(false)",
-			"      await sleep(.3)",
-			"",
-			"    } catch(err) {",
-			"    console.log('ERROR', err.message);",
-			"    setFlash(err.message)",
-			"    }",
-			"  }",
-			""
-		],
-		"description": "axios post request"
-	},
-	"javscript div": {
-		"prefix": "htmldiv",
-		"body": [
-			"<div className={\"${2:some_tailwind_classes}\"}>",
-			"  ${3:child_elements}",
-			"</div>"
-		],
-		"description": "javscript div"
-	},
-	"javscript h3": {
-		"prefix": "htmlh3",
-		"body": [
-			"<h3 className={\"${2:some_tailwind_classes}\"}>",
-			"  ${3:Some Words Here}",
-			"</h3>"
-		],
-		"description": "javscript h3"
-	},
-	"html h1": {
-		"prefix": "htmlh1",
-		"body": [
-			"<h1 ${1:className}={\"${2:some_tailwind_classes}\"}>",
-			"  ${3:content}",
-			"</h1>"
-		],
-		"description": "html h1"
-	},
-	"html span": {
-		"prefix": "htmlspan",
-		"body": [
-			"<span ${1:className}={\"${2:some_tailwind_classes}\"}>",
-			"  ${3:content}",
-			"</span>"
-		],
-		"description": "html span"
-	}
+  "react-component": {
+    "prefix": "rcomp",
+    "body": [
+      "import React, {useEffect, useState, useContext, useRef} from 'react';",
+      "",
+      "const ${2:MyComponent} = ({navigation}) => {",
+      "  return <div>",
+      "    <h1>${2:MyComponent}</h1>",
+      "  </div>",
+      "}",
+      "",
+      "export default ${2:MyComponent};"
+    ],
+    "description": "React Component"
+  },
+  "react state": {
+    "prefix": "rst",
+    "body": ["const [${1:state}, ${2:setState}] = useState(${3:defaultState})"],
+    "description": "react state"
+  },
+  "useEffect": {
+    "prefix": "rue",
+    "body": ["useEffect(() => {", "  ${1:doSomething}", "}, [${2:state}])", ""],
+    "description": "React useEffect()"
+  },
+  "react-native-component": {
+    "prefix": "rncomp",
+    "body": [
+      "import React, {useEffect, useState, useContext, useRef} from 'react';",
+      "import { View, Text, TouchableOpacity, TextInput, StatusBar, ActivityIndicator, Image, ScrollView } from 'react-native';",
+      "import tw from 'tailwind-rn';",
+      "",
+      "const ${2:MyComponent} = ({navigation}) => {",
+      "  return <View style={tw('w-full h-full')}>",
+      "  <StatusBar barStyle='dark-content' backgroundColor='#ecf0f1' />",
+      "    <Text>${2:MyComponent}</Text>",
+      "  </View>",
+      "}",
+      "",
+      "export default ${2:MyComponent};"
+    ],
+    "description": "react-native-component"
+  },
+  "react native view component": {
+    "prefix": "rnview",
+    "body": ["<View style={tw('${1:classes}')}>${2:something}</View>"],
+    "description": "react native view component"
+  },
+  "react native text component": {
+    "prefix": "rntext",
+    "body": ["<Text style={tw('${1:classes}')}>${2:some text}</Text>"],
+    "description": "react native text component"
+  },
+  "react native touchable opacity (button) component": {
+    "prefix": "rnbtn",
+    "body": [
+      "<TouchableOpacity ",
+      "  style={tw('${1:classes}')} ",
+      "  disabled={${2:false}} ",
+      "  onPress={() => {",
+      "    ${3:return null}",
+      "  }}",
+      "  >",
+      "  <Text style={tw('${4:classes}')}>",
+      "    ${5:button text}",
+      "  </Text>",
+      "</TouchableOpacity>"
+    ],
+    "description": "react native touchable opacity (button) component"
+  },
+  "axios get request without params": {
+    "prefix": "agetwop",
+    "body": [
+      "const ${1:getSomethingWithoutParams} = async () => {",
+      "    try {",
+      "      setIsLoading(true)",
+      "      const { data } = await api.get(",
+      "       ${2:'path'},",
+      "        {",
+      "          headers: {",
+      "            Authorization: await auth_token(),",
+      "          },",
+      "        }",
+      "      );",
+      "",
+      "      await sleep(.3)",
+      "      setIsLoading(false)",
+      "      await sleep(.3)",
+      "",
+      "    } catch(err) {",
+      "    console.log('ERROR', err.message);",
+      "    setFlash(err.message)",
+      "    }",
+      "  }",
+      ""
+    ],
+    "description": "axios get request without params"
+  },
+  "axios get request with params": {
+    "prefix": "agetwp",
+    "body": [
+      "const ${1:getSomethingWithParams} = async () => {",
+      "    try {",
+      "      setIsLoading(true)",
+      "      const {data} = await api.get(",
+      "       ${2:'path'},",
+      "        {",
+      "         ${3:params}: { ${4:attributes} },",
+      "          headers: { Authorization: await auth_token() },",
+      "        }",
+      "      );",
+      "",
+      "      await sleep(.3)",
+      "      setIsLoading(false)",
+      "      await sleep(.3)",
+      "",
+      "    } catch(err) {",
+      "    console.log('ERROR', err.message);",
+      "    setFlash(err.message)",
+      "    }",
+      "  }",
+      ""
+    ],
+    "description": "axios get request"
+  },
+  "axios put request": {
+    "prefix": "aput",
+    "body": [
+      "const ${1:putSomething} = async () => {",
+      "    try {",
+      "      setIsLoading(true)",
+      "      const { data } = await api.put(",
+      "       ${2:'path'},",
+      "        {",
+      "          ${3:params}: {",
+      "            ${4:attributes},",
+      "          },",
+      "        },",
+      "        {",
+      "          headers: {",
+      "            Authorization: await auth_token(),",
+      "          },",
+      "        }",
+      "      );",
+      "",
+      "      await sleep(.3)",
+      "      setIsLoading(false)",
+      "      await sleep(.3)",
+      "",
+      "    } catch(err) {",
+      "    console.log('ERROR', err.message);",
+      "    setFlash(err.message)",
+      "    }",
+      "  }",
+      ""
+    ],
+    "description": "axios put request"
+  },
+  "axios post request": {
+    "prefix": "apost",
+    "body": [
+      "const ${1:postSomething} = async () => {",
+      "    try {",
+      "      setIsLoading(true)",
+      "      const { data } = await api.post(",
+      "        ${2:'path'},",
+      "        {",
+      "         ${3:params}: {",
+      "            ${4:attributes},",
+      "          },",
+      "        },",
+      "        {",
+      "          headers: { Authorization: token },",
+      "        }",
+      "      );",
+      "      ",
+      "",
+      "      await sleep(.3)",
+      "      setIsLoading(false)",
+      "      await sleep(.3)",
+      "",
+      "    } catch(err) {",
+      "    console.log('ERROR', err.message);",
+      "    setFlash(err.message)",
+      "    }",
+      "  }",
+      ""
+    ],
+    "description": "axios post request"
+  },
+  "javscript div": {
+    "prefix": "htmldiv",
+    "body": [
+      "<div className={\"${2:some_tailwind_classes}\"}>",
+      "  ${3:child_elements}",
+      "</div>"
+    ],
+    "description": "javscript div"
+  },
+  "javscript h3": {
+    "prefix": "htmlh3",
+    "body": [
+      "<h3 className={\"${2:some_tailwind_classes}\"}>",
+      "  ${3:Some Words Here}",
+      "</h3>"
+    ],
+    "description": "javscript h3"
+  },
+  "html h1": {
+    "prefix": "htmlh1",
+    "body": [
+      "<h1 ${1:className}={\"${2:some_tailwind_classes}\"}>",
+      "  ${3:content}",
+      "</h1>"
+    ],
+    "description": "html h1"
+  },
+  "html span": {
+    "prefix": "htmlspan",
+    "body": [
+      "<span ${1:className}={\"${2:some_tailwind_classes}\"}>",
+      "  ${3:content}",
+      "</span>"
+    ],
+    "description": "html span"
+  }
 }
